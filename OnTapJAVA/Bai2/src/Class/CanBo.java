@@ -1,80 +1,71 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Class;
 
-import java.util.Date;
 import java.util.Scanner;
 
-/**
- *
- * @author Admin
- */
 public class CanBo {
-    private String hoTen;
-    private String ngaySinh;
-    private String gioiTinh;
-    private String diaChi;
-    public CanBo ()
-    {
-    }
-    public CanBo (String hoTen, String ngaySinh, String gioiTinh, String diaChi)
-    {
-        this.hoTen = hoTen;
-        this.ngaySinh = ngaySinh;
-        this.gioiTinh = gioiTinh;
-        this.diaChi = diaChi;
+    private String hoTen320;
+    private String ngaySinh320;
+    private String gioiTinh320;
+    private String diaChi320;
+
+    public CanBo() {
     }
 
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public String getGioiTinh() {
-        return gioiTinh;
+    public CanBo(String hoTen320, String ngaySinh320, String gioiTinh320, String diaChi320) {
+        this.hoTen320 = hoTen320;
+        this.ngaySinh320 = ngaySinh320;
+        this.gioiTinh320 = gioiTinh320;
+        this.diaChi320 = diaChi320;
     }
 
     public String getHoTen() {
-        return hoTen;
+        return hoTen320;
+    }
+
+    public void setHoTen(String hoTen320) {
+        this.hoTen320 = hoTen320;
     }
 
     public String getNgaySinh() {
-        return ngaySinh;
+        return ngaySinh320;
     }
 
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
+    public void setNgaySinh(String ngaySinh320) {
+        this.ngaySinh320 = ngaySinh320;
     }
 
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
+    public String getGioiTinh() {
+        return gioiTinh320;
     }
 
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
+    public void setGioiTinh(String gioiTinh320) {
+        this.gioiTinh320 = gioiTinh320;
     }
 
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh = ngaySinh;
+    public String getDiaChi() {
+        return diaChi320;
     }
-    public void nhapThongTin(Scanner sc)
-    {
+
+    public void setDiaChi(String diaChi320) {
+        this.diaChi320 = diaChi320;
+    }
+
+    public void nhapThongTin(Scanner sc) {
         System.out.println("Vui long nhap thong tin!");
-        System.out.println("Nhap ho va ten nhan vien: ");
-        this.hoTen = sc.nextLine();
-        System.out.println("Nhap ngay sinh theo dinh dang dd/MM/yyy: ");
-        this.ngaySinh = sc.nextLine();
-        System.out.println("Nhap gioi tinh: ");
-        this.gioiTinh = sc.nextLine();
-        System.out.println("Nhap dia chi: ");
-        this.diaChi = sc.nextLine();
+        System.out.print("Nhap ho va ten nhan vien: ");
+        this.hoTen320 = sc.nextLine();
+        System.out.print("Nhap ngay sinh theo dinh dang dd/MM/yyyy: ");
+        this.ngaySinh320 = sc.nextLine();
+        System.out.print("Nhap gioi tinh: ");
+        this.gioiTinh320 = sc.nextLine();
+        System.out.print("Nhap dia chi: ");
+        this.diaChi320 = sc.nextLine();
     }
-    public void xuatThongTin()
-    {
-        System.out.println("Ho ten nhan vien: "+hoTen);
-        System.out.println("Ngay sinh: "+ngaySinh);
-        System.out.println("Gioi tinh: "+gioiTinh);
-        System.out.println("Dia chi: "+diaChi);
+
+    public void xuatThongTin() {
+        System.out.println("Ho ten nhan vien: " + hoTen320);
+        System.out.println("Ngay sinh: " + ngaySinh320);
+        System.out.println("Gioi tinh: " + gioiTinh320);
+        System.out.println("Dia chi: " + diaChi320);
     }
 }

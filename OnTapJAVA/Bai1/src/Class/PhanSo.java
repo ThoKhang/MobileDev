@@ -10,111 +10,111 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class PhanSo {
-    private int tuSo;
-    private int mauSo;
-    public PhanSo()
+public class PhanSo 
     {
-        this.tuSo = 0;
-        this.mauSo = 1;
+    private int tuSo320;
+    private int mauSo320;
+
+    public PhanSo() 
+    {
+        this.tuSo320 = 0;
+        this.mauSo320 = 1;
     }
 
-    public int getMauSo() {
-        return mauSo;
+    public int getMauSo() 
+    {
+        return mauSo320;
     }
 
-    public int getTuSo() {
-        return tuSo;
+    public int getTuSo() 
+    {
+        return tuSo320;
     }
     
-    public PhanSo(int tuSo, int mauSo)
+    public PhanSo(int tuSo320, int mauSo320) 
     {
-        this.tuSo = tuSo;
-        this.mauSo = mauSo;
+        this.tuSo320 = tuSo320;
+        this.mauSo320 = mauSo320;
     }
-    public PhanSo congPhanSo (PhanSo ps2)
-    {
-        int tsm = this.tuSo * ps2.mauSo + this.mauSo * ps2.tuSo;
-        int msm = this.mauSo * ps2.mauSo;
-        return new PhanSo(tsm, msm);
-    }
-    /*
-    public PhanSo congPS(PhanSo ps2) {
-        int tsm = tuSo * ps2.mauSo + ps2.tuSo * mauSo;
-        int msm = mauSo * ps2.mauSo;
-        PhanSo phanSo = new PhanSo(tsm, msm);
-        return phanSo;
-    }
-    */
 
-    public PhanSo truPhanSo (PhanSo ps2)
+    public PhanSo congPhanSo(PhanSo ps320) 
     {
-        int tsm = this.tuSo * ps2.mauSo - this.mauSo * ps2.tuSo;
-        int msm = this.mauSo * ps2.mauSo;
-        return new PhanSo (tsm, msm);
-    }
-    public PhanSo nhanPhanSo (PhanSo ps2)
-    {
-        int tsm = this.tuSo * ps2.tuSo;
-        int msm = this.mauSo * ps2.mauSo;
+        int tsm = this.tuSo320 * ps320.mauSo320 + this.mauSo320 * ps320.tuSo320;
+        int msm = this.mauSo320 * ps320.mauSo320;
         return new PhanSo(tsm, msm);
     }
-    public PhanSo chiaPhanSo (PhanSo ps2)
+
+    public PhanSo truPhanSo(PhanSo ps320) 
     {
-        int tsm = this.tuSo * ps2.mauSo;
-        int msm = this.mauSo * ps2.tuSo;
+        int tsm = this.tuSo320 * ps320.mauSo320 - this.mauSo320 * ps320.tuSo320;
+        int msm = this.mauSo320 * ps320.mauSo320;
         return new PhanSo(tsm, msm);
     }
-    public int UCLN (int so1, int so2)
+
+    public PhanSo nhanPhanSo(PhanSo ps320) 
+    {
+        int tsm = this.tuSo320 * ps320.tuSo320;
+        int msm = this.mauSo320 * ps320.mauSo320;
+        return new PhanSo(tsm, msm);
+    }
+
+    public PhanSo chiaPhanSo(PhanSo ps320) 
+    {
+        int tsm = this.tuSo320 * ps320.mauSo320;
+        int msm = this.mauSo320 * ps320.tuSo320;
+        return new PhanSo(tsm, msm);
+    }
+
+    public int UCLN(int so1, int so2) 
     {
         int a = so1 % so2;
-        while (a != 0)
-        {
+        while (a != 0) {
             so1 = so2;
             so2 = a;
             a = so1 % so2;
         }
         return so2;
     }
-    public boolean phanSoToiGian()
+
+    public boolean phanSoToiGian() 
     {
-        int a = UCLN(this.tuSo, this.mauSo);
-        if( a == 1 )
+        int a = UCLN(this.tuSo320, this.mauSo320);
+        if (a == 1)
             return true;
-        else    
+        else
             return false;
     }
-    public PhanSo chiaPhanSoToiGian()
+
+    public PhanSo chiaPhanSoToiGian() 
     {
-        int a = UCLN(tuSo, mauSo);
-        return new PhanSo (tuSo/a, mauSo/a);
+        int a = UCLN(tuSo320, mauSo320);
+        return new PhanSo(tuSo320 / a, mauSo320 / a);
     }
-    public void nhapDL (Scanner sc)
+
+    public void nhapDL(Scanner sc320) 
     {
-        int mauSo, tuSo;
-        do
-        {
-            System.out.println("Vui long nhap  tu so: ");
-            tuSo = sc.nextInt();
+        int tuSo320, mauSo320;
+        do {
+            System.out.println("Vui long nhap tu so: ");
+            tuSo320 = sc320.nextInt();
             System.out.println("Vui long nhap mau so: ");
-            mauSo = sc.nextInt();
-            if (mauSo == 0)
+            mauSo320 = sc320.nextInt();
+            if (mauSo320 == 0)
                 System.out.println("Mau so khong duoc co gia tri 0! vui long nhap lai");
-            else
-            {
-                this.tuSo = tuSo;
-                this.mauSo = mauSo;
+            else {
+                this.tuSo320 = tuSo320;
+                this.mauSo320 = mauSo320;
                 System.out.println("Nhap thanh cong!");
             }
-        }
-        while (mauSo == 0);
-
+        } while (mauSo320 == 0);
     }
-    public void xuatDL() {
-		if (tuSo * mauSo < 0) {
-			System.out.println("\t-" + Math.abs(tuSo) + "/" + Math.abs(mauSo));
-		} else {
-			System.out.println("\t" + Math.abs(tuSo) + "/" + Math.abs(mauSo));
-		}
-	}
+
+    public void xuatDL() 
+    {
+        if (tuSo320 * mauSo320 < 0) {
+            System.out.println("\t-" + Math.abs(tuSo320) + "/" + Math.abs(mauSo320));
+        } else {
+            System.out.println("\t" + Math.abs(tuSo320) + "/" + Math.abs(mauSo320));
+        }
+    }
 }

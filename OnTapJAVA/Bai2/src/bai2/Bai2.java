@@ -18,7 +18,7 @@ public class Bai2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        QLCB danhSachCanBo = new QLCB ();
+        QLCB danhSachCanBo320 = new QLCB ();
         Scanner sc = new Scanner(System.in);
         int check;
         do
@@ -30,12 +30,12 @@ public class Bai2 {
             switch(check)
             {
                 case 1:
-                    danhSachCanBo.themDanhSachCanBo(sc);
+                    danhSachCanBo320.themDanhSachCanBo(sc);
                     break;
                 case 2:
                     System.out.println("Nhap ho ten can bo can tim: ");
                     String hoTen = sc.nextLine();
-                    danhSachCanBo.timKiem(hoTen);
+                    danhSachCanBo320.timKiem(hoTen);
                     break;
                 case 3:
                     break;

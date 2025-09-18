@@ -1,44 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Class;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Admin
- */
-public class KySu extends CanBo{
-    private String nganhDaoTao;
-    public KySu()
-    {}
-    public KySu(String hoTen, String ngaySinh, String gioiTinh, String diaChi, String nganhDaoTao)
-    {
-        super(hoTen, ngaySinh, gioiTinh, diaChi);
-        this.nganhDaoTao = nganhDaoTao;
-    }
-    public String getNganhDaoTao() {
-        return nganhDaoTao;
+public class KySu extends CanBo {
+    private String nganhDaoTao320;   // thêm 320 vào tên biến
+
+    public KySu() {}
+
+    public KySu(String hoTen320, String ngaySinh320, String gioiTinh320, String diaChi320, String nganhDaoTao320) {
+        super(hoTen320, ngaySinh320, gioiTinh320, diaChi320);
+        this.nganhDaoTao320 = nganhDaoTao320;
     }
 
-    public void setNganhDaoTao(String nganhDaoTao) {
-        this.nganhDaoTao = nganhDaoTao;
+    public String getNganhDaoTao() {
+        return nganhDaoTao320;
     }
-    
+
+    public void setNganhDaoTao(String nganhDaoTao320) {
+        this.nganhDaoTao320 = nganhDaoTao320;
+    }
+
     @Override
-    public void nhapThongTin(Scanner sc)
-    {
+    public void nhapThongTin(Scanner sc) {
         super.nhapThongTin(sc);
         System.out.println("Nhap nganh dao tao: ");
-        this.nganhDaoTao = sc.nextLine();
+        this.nganhDaoTao320 = sc.nextLine();
     }
-    public void xuatThongTin(Scanner sc)
-    {
+
+    @Override
+    public void xuatThongTin() {
         super.xuatThongTin();
-        System.out.println("Nganh dao tao: "+ nganhDaoTao);
+        System.out.println("Nganh dao tao: " + nganhDaoTao320);
     }
-    
-        
 }

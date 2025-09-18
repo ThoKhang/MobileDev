@@ -1,75 +1,66 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Class;
 
-import java.util.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Admin
- */
 public class QLCB {
-    private ArrayList<CanBo> dsCanBo;
-    public QLCB()
-    {
-        dsCanBo = new ArrayList<CanBo>();
+    private ArrayList<CanBo> dsCanBo320;
+
+    public QLCB() {
+        dsCanBo320 = new ArrayList<CanBo>();
     }
-    public void themCanBo (CanBo canBoThem)
-    {
-        dsCanBo.add(canBoThem);
+
+    public void themCanBo(CanBo canBoThem320) {
+        dsCanBo320.add(canBoThem320);
     }
-    public void themDanhSachCanBo (Scanner sc)
-    {
-        int check;
-        do
-        {
-            System.out.println("Hay can bo vao danh sach !");
-            System.out.println("Nhap 1 de them Cong nhan, 2 de them ky su, 3 de them nhan vien phuc vu, 4 de ket thuc");
-            check = sc.nextInt();
-            sc.nextLine();
-            CanBo cbThem;
-            switch(check)
-            {
+
+    public void themDanhSachCanBo(Scanner sc320) {
+        int check320;
+        do {
+            System.out.println("Hay them can bo vao danh sach!");
+            System.out.println("Nhap 1 de them Cong nhan, 2 de them Ky su, 3 de them Nhan vien phuc vu, 4 de ket thuc");
+            check320 = sc320.nextInt();
+            sc320.nextLine();
+
+            CanBo cbThem320;
+            switch (check320) {
                 case 1:
-                    cbThem = new CongNhan();
-                    cbThem.nhapThongTin(sc);
-                    themCanBo(cbThem);
-                    System.out.println("Da them can bo !");
+                    cbThem320 = new CongNhan();
+                    cbThem320.nhapThongTin(sc320);
+                    themCanBo(cbThem320);
+                    System.out.println("Da them Cong nhan!");
                     break;
                 case 2:
-                    cbThem = new KySu();
-                    cbThem.nhapThongTin(sc);
-                    themCanBo(cbThem);
-                    System.out.println("Da them can bo !");
+                    cbThem320 = new KySu();
+                    cbThem320.nhapThongTin(sc320);
+                    themCanBo(cbThem320);
+                    System.out.println("Da them Ky su!");
                     break;
                 case 3:
-                    cbThem = new NhanVienPhucVu();
-                    cbThem.nhapThongTin(sc);
-                    themCanBo(cbThem);
-                    System.out.println("Da them can bo !");
+                    cbThem320 = new NhanVienPhucVu();
+                    cbThem320.nhapThongTin(sc320);
+                    themCanBo(cbThem320);
+                    System.out.println("Da them Nhan vien phuc vu!");
                     break;
                 case 4:
                     break;
                 default:
-                    System.out.println("Nhap sai cu phap !");
+                    System.out.println("Nhap sai cu phap!");
                     break;
+            }
+        } while (check320 != 4);
+    }
 
+    public void timKiem(String hoTen320) {
+        boolean timThay320 = false;
+        for (CanBo cb320 : dsCanBo320) {
+            if (hoTen320.equals(cb320.getHoTen())) {
+                cb320.xuatThongTin();
+                timThay320 = true;
             }
         }
-        while (check != 4);
-    }
-    public void timKiem (String hoTen)
-    {
-        for(CanBo cb: dsCanBo)
-        {
-            if(hoTen.equals(cb.getHoTen()))
-                cb.xuatThongTin();
-            else
-                System.out.println("deo co trong danh sach !");
+        if (!timThay320) {
+            System.out.println("Khong co trong danh sach!");
         }
     }
 }
