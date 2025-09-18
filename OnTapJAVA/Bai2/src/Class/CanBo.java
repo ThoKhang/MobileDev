@@ -74,7 +74,7 @@ public class CanBo {
     {
         System.out.println("Ho ten nhan vien: "+hoTen);
         System.out.println("Ngay sinh: "+ngaySinh);
-        System.out.println("Gioi tinh:"+gioiTinh);
+        System.out.println("Gioi tinh: "+gioiTinh);
         System.out.println("Dia chi: "+diaChi);
     }
 }
