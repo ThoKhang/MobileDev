@@ -1,31 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Class;
 
-/**
- *
- * @author Admin
- */
-public class Sach extends TaiLieu{
-    private String tenTacGia_320;
-    private int soTrang_320;
+import java.util.Scanner;
 
-    public int getSoTrang_320() {
-        return soTrang_320;
-    }
+public class Sach extends TaiLieu {
+	private String tacGia_320;
+	private int soTrang_320;
 
-    public String getTenTacGia_320() {
-        return tenTacGia_320;
-    }
+	public Sach() {
 
-    public void setSoTrang_320(int soTrang_320) {
-        this.soTrang_320 = soTrang_320;
-    }
+	}
 
-    public void setTenTacGia_320(String tenTacGia_320) {
-        this.tenTacGia_320 = tenTacGia_320;
-    }
-    
+	public Sach(String maTaiLieu_320, String tenNXB_320, int soBanPhatHanh_320, String tacGia_320, int soTrang_320) {
+		super(maTaiLieu_320, tenNXB_320, soBanPhatHanh_320);
+		this.tacGia_320 = tacGia_320;
+		this.soTrang_320 = soTrang_320;
+	}
+
+	public void nhapThongTin(Scanner sc_320) {
+		super.nhapThongTin(sc_320);
+		System.out.print("\tNhap tac gia: ");
+		tacGia_320 = sc_320.nextLine();
+		System.out.print("\tNhap so trang: ");
+		soTrang_320 = sc_320.nextInt();
+		sc_320.nextLine();
+	}
+
+	public void hienThiThongTin() {
+		super.hienThiThongTin();
+		System.out.println("\ttac gia: " + tacGia_320);
+		System.out.println("\tSo trang: " + soTrang_320);
+	}
 }
