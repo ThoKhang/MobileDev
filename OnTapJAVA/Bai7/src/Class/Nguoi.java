@@ -21,6 +21,7 @@ public class Nguoi {
 	}
 
 	public void nhapThongTin(Scanner sc_320) {
+                sc_320.nextLine();
 		System.out.print("\tNhap ho ten: ");
 		hoTen_320 = sc_320.nextLine();
 

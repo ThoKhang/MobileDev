@@ -6,16 +6,16 @@ import Class.QuanLy;
 
 public class Bai10 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args_320) {
+		Scanner sc_320 = new Scanner(System.in);
 
-		QuanLy ql = new QuanLy();
-		ql.nhapDanhSach(sc);
+		QuanLy ql_320 = new QuanLy();
+		ql_320.nhapDanhSach(sc_320);
 
 		System.out.println("Danh sach bien lai cua cac ho gia dinh la:");
-		ql.hienThiDanhSach();
+		ql_320.hienThiDanhSach();
 
-		sc.close();
+		sc_320.close();
 	}
 
 }

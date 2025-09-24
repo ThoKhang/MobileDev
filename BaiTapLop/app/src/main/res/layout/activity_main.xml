@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewso2_320"
+        android:layout_width="204dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/db0cd0a2_3bed_4f92_9a0d_195a6a1de0b6_icon_removebg_preview" />
+
+    <TextView
+        android:id="@+id/textUserName320"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:text="User Name"
+        android:textColor="#0333FF"
+        android:textColorLink="#0729FA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewso2_320" />
+
+    <Button
+        android:id="@+id/button320"
+        android:layout_width="258dp"
+        android:layout_height="53dp"
+        android:text="LOGIN ME"
+        android:textColor="#FF2C00"
+        android:textColorHighlight="#2B3522"
+        android:textColorHint="#0007E2"
+        android:textColorLink="#0F46EB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="532dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="184dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="72dp"
+        android:text="Lost password ?"
+        android:textColor="#2B07FA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button320" />
+
+    <EditText
+        android:id="@+id/idpass320"
+        android:layout_width="256dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#8F0E40FF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button320"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUserName320"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="*************" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

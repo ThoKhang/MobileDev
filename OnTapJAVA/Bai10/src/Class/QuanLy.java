@@ -4,41 +4,35 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class QuanLy {
-	// Thuoc tinh
-	private ArrayList<BienLai> ds;
+	private ArrayList<BienLai> ds_320;
 
-	// Phuong thuc
-	// Ham khoi tao
 	public QuanLy() {
-		ds = new ArrayList<BienLai>(10);
+		ds_320 = new ArrayList<BienLai>(10);
 	}
 
-	// Ham them bien lai vao danh sach
-	public void themBienLai(BienLai bienLai) {
-		ds.add(bienLai);
+	public void themBienLai(BienLai bienLai_320) {
+		ds_320.add(bienLai_320);
 	}
 
-	// Ham nhap danh sach
-	public void nhapDanhSach(Scanner sc) {
-		BienLai bienLai;
+	public void nhapDanhSach(Scanner sc_320) {
+		BienLai bienLai_320;
 		System.out.print("Nhap vao so luong bien lai: ");
-		int n = sc.nextInt();
-		sc.nextLine();
+		int n_320 = sc_320.nextInt();
+		sc_320.nextLine();
 		System.out.println("Nhap vao danh sach bien lai:");
-		for (int i = 0; i < n; i++) {
-			System.out.println("Bien lai thu " + (i + 1) + " la:");
-			bienLai = new BienLai();
-			bienLai.nhapThongTin(sc);
+		for (int i_320 = 0; i_320 < n_320; i_320++) {
+			System.out.println("Bien lai thu " + (i_320 + 1) + " la:");
+			bienLai_320 = new BienLai();
+			bienLai_320.nhapThongTin(sc_320);
 
-			themBienLai(bienLai);
+			themBienLai(bienLai_320);
 		}
 	}
 
-	// Ham hien thi danh sach
 	public void hienThiDanhSach() {
-		for (int i = 0; i < ds.size(); i++) {
-			System.out.println("Bien lai thu " + (i + 1) + " la:");
-			ds.get(i).hienThiThongTin();
+		for (int i_320 = 0; i_320 < ds_320.size(); i_320++) {
+			System.out.println("Bien lai thu " + (i_320 + 1) + " la:");
+			ds_320.get(i_320).hienThiThongTin();
 			System.out.println();
 		}
 	}
