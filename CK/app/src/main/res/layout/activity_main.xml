@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageLogin320"
+        android:layout_width="348dp"
+        android:layout_height="204dp"
+        android:src="@drawable/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/helloLogin320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/fontlora"
+        android:text="HELLO"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogin320" />
+
+    <TextView
+        android:id="@+id/gioiThieuLogin320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Xin chào đến với app nghe nhạc của\n Khang, mời bạn đăng nhập"
+        android:gravity="center_horizontal"
+        android:alpha="0.6"
+        android:textStyle="italic|bold"
+        android:fontFamily="@font/fontlora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloLogin320" />
+
+    <LinearLayout
+        android:id="@+id/editTextContainer320"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_rectangle"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDangNhap320">
+
+        <EditText
+            android:id="@+id/editTextUsername320"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:fontFamily="@font/fontlora"
+            android:hint="Trần Văn Thọ Khang" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDangNhap320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/fontlora"
+        android:text="Đăng nhập"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gioiThieuLogin320" />
+
+    <LinearLayout
+        android:id="@+id/editTextContainerMatKhau320"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_rectangle"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMatKhau">
+
+        <!-- EditText thứ nhất -->
+        <EditText
+            android:id="@+id/editTextPassword320"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:fontFamily="@font/fontlora"
+            android:hint="123456789"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textMatKhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:fontFamily="@font/fontlora"
+        android:text="Mật khẩu"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContainer320" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#514eb6"
+        android:fontFamily="@font/fontlora"
+        android:text="Đăng nhập"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContainerMatKhau320" />
+
+    <TextView
+        android:id="@+id/tv_link320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.6"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Quên mật khẩu ?\nnhấp vào đây "
+        android:textColor="#514eb6"
+        android:textSize="13dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContainerMatKhau320" />
+
+    <TextView
+        android:id="@+id/anotherLogin320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:alpha="0.8"
+        android:fontFamily="@font/fontlora"
+        android:text="Đăng nhập bằng"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContainerMatKhau320" />
+
+    <ImageView
+        android:id="@+id/anotherLoginImage320"
+        android:layout_width="210dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="88dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/anotherlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContainerMatKhau320" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
