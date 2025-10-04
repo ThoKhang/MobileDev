@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple Test"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xin Chào Tôi là Trần Văn Thọ Khang"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+
+    <!-- Hai nút ở trên trong LinearLayout ngang -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <!-- Nút Click để xem -->
+        <Button
+            android:id="@+id/btnClick"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Click để xem"
+            android:textSize="16sp"
+            android:backgroundTint="#4CAF50"/>
+
+        <!-- Nút AHIHI đồ ngốc -->
+        <Button
+            android:id="@+id/btnAhihi"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="AHIHI đồ ngốc"
+            android:textSize="16sp"
+            android:backgroundTint="#2196F3" />
+
+    </LinearLayout>
+
+    <!-- Nút ở dưới -->
+    <Button
+        android:layout_marginTop="430dp"
+        android:id="@+id/btnDotnetGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONETGROUP"
+        android:textSize="16sp"
+        android:backgroundTint="#FF5722"
+        android:layout_gravity="center" />
+
+</LinearLayout>

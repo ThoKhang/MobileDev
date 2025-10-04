@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Musicapp">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".trangregister"
             android:exported="false" />
         <activity
