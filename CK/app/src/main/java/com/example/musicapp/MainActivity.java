@@ -3,6 +3,7 @@ package com.example.musicapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,5 +30,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
         );
+        Button buttonLogin = findViewById(R.id.buttonLogin320);
+        buttonLogin.setOnClickListener(
+                v -> {
+                    Intent intent = new Intent(this, Profile.class);
+                    startActivity(intent);
+                }
+        );
+
+
     }
 }
