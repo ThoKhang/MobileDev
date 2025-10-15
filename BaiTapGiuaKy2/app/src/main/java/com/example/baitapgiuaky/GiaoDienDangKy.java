@@ -23,5 +23,14 @@ public class GiaoDienDangKy extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button button = findViewById(R.id.buttonDangKy320);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiaoDienDangKy.this, MainActivity.class );
+                startActivity(intent);
+            }
+        });
+        
     }
 }
