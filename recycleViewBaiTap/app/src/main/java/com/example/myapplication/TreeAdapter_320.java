@@ -17,10 +17,12 @@ public class TreeAdapter_320 extends RecyclerView.Adapter<TreeAdapter_320.ViewHo
 
     private Context context_320;
     private List<Tree_320> treeList_320;
+    private OnItemClickListener_320 listener_320;  // dùng interface riêng
 
-    public TreeAdapter_320(Context context_320, List<Tree_320> treeList_320) {
+    public TreeAdapter_320(Context context_320, List<Tree_320> treeList_320, OnItemClickListener_320 listener_320) {
         this.context_320 = context_320;
         this.treeList_320 = treeList_320;
+        this.listener_320 = listener_320;
     }
 
     @NonNull
@@ -37,6 +39,13 @@ public class TreeAdapter_320 extends RecyclerView.Adapter<TreeAdapter_320.ViewHo
         holder.tvDesc_320.setText(tree_320.getDescription_320());
         holder.ivTree_320.setImageResource(tree_320.getImageRes_320());
         holder.tvOwner_320.setText("Trần Văn Thọ Khang_320");
+
+        // click trả về interface
+        holder.card_320.setOnClickListener(v -> {
+            if (listener_320 != null) {
+                listener_320.onItemClick(tree_320);
+            }
+        });
     }
 
     @Override
@@ -45,7 +54,6 @@ public class TreeAdapter_320 extends RecyclerView.Adapter<TreeAdapter_320.ViewHo
     }
 
     static class ViewHolder_320 extends RecyclerView.ViewHolder {
-
         CardView card_320;
         ImageView ivTree_320;
         TextView tvName_320, tvDesc_320, tvOwner_320;

@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
         recyclerView_320.setLayoutManager(new LinearLayoutManager(this));
 
         treeList_320 = createSampleData_320();
-        treeAdapter_320 = new TreeAdapter_320(this, treeList_320);
+
+        // Sử dụng interface riêng để bắt click
+        treeAdapter_320 = new TreeAdapter_320(this, treeList_320, new OnItemClickListener_320() {
+            @Override
+            public void onItemClick(Tree_320 tree_320) {
+                // Hiện Toast với tên cây
+                Toast.makeText(MainActivity.this, tree_320.getName_320(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         recyclerView_320.setAdapter(treeAdapter_320);
     }
 
